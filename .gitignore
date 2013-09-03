@@ -1,0 +1,16 @@
+.htaccess
+
+local-config.php
+wp-config.php
+
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/cache/
+wp-content/backups/
+
+sitemap.xml
+sitemap.xml.gz
+
+.DS_Store
