@@ -79,3 +79,12 @@ if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) )
 // ===========================================================================================
 define( 'WP_STAGE', '%%WP_STAGE%%' );
 define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' ); // Does magic in WP Stack to handle staging domain rewriting
+
+
+// ===================
+// Bootstrap WordPress
+// ===================
+if ( ! defined( 'ABSPATH' ) )
+	define( 'ABSPATH', dirname( __FILE__ ) . '/html/' );
+	
+require_once( ABSPATH . 'wp-settings.php' );
