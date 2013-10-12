@@ -3,12 +3,13 @@
 local-config.php
 wp-config.php
 
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/cache/
-wp-content/backups/
+/html/wp-content/uploads/
+/html/wp-content/blogs.dir/
+/html/wp-content/upgrade/
+/html/wp-content/backup-db/
+/html/wp-content/cache/
+/html/wp-content/backups/
+/html/wp-content/plugins/hello.php
 
 sitemap.xml
 sitemap.xml.gz
