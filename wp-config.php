@@ -37,6 +37,12 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'WP_DEBUG_DISPLAY', false );
 }
 
+// =============================================================
+// Disables all core updates:
+// Shouldn't matter b/c we're using Git, but just to be explicit
+// =============================================================
+define( 'WP_AUTO_UPDATE_CORE', false );
+
 // ================================================
 // You almost certainly do not want to change these
 // ================================================
