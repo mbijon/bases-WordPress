@@ -1,4 +1,5 @@
-/* Mixins */
+/* Dashicons mixin use: @include dashicons( '\f140' ); */
+/* Button mixin- creates 3d-ish button effect with correct  highlights/shadows, based on a base color. */
 /** Styles pulled from wp-admin.css This should either be merged into wp-admin.css later, or that  section (23.0) should be removed + moved into customize-controls.scss */
 .control-section .accordion-section-title { background: #fff; }
 
@@ -22,9 +23,8 @@ body.full-overlay-active { overflow: hidden; }
 
 .wp-full-overlay-main { position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; }
 
-.wp-full-overlay-sidebar .wp-full-overlay-header { position: absolute; left: 0; right: 0; height: 45px; padding: 0 20px; line-height: 45px; z-index: 10; margin: 0; }
-
-.wp-full-overlay-sidebar .wp-full-overlay-header { border-top: none; -webkit-box-shadow: none; box-shadow: none; }
+.wp-full-overlay-sidebar .wp-full-overlay-header { position: absolute; left: 0; right: 0; height: 45px; padding: 0 20px; line-height: 45px; z-index: 10; margin: 0; border-top: none; -webkit-box-shadow: none; box-shadow: none; }
+.wp-full-overlay-sidebar .wp-full-overlay-header a.back { margin-top: 10px; }
 
 .wp-full-overlay-sidebar .wp-full-overlay-footer { bottom: 0; border-bottom: none; border-top: none; -webkit-box-shadow: none; box-shadow: none; }
 
@@ -174,3 +174,12 @@ body { overflow: hidden; }
 body.cheatin { min-width: 0; background: #f9f9f9; padding: 50px; }
 
 body.cheatin p { max-width: 700px; margin: 0 auto; padding: 2em; font-size: 14px; background: #fff; border: 1px solid #dfdfdf; -webkit-border-radius: 3px; border-radius: 3px; }
+
+/* temporary fix for admin-bar hover color */
+#wpadminbar .ab-top-menu > li:hover > .ab-item, #wpadminbar .ab-top-menu > li.hover > .ab-item, #wpadminbar > #wp-toolbar > #wp-admin-bar-root-default li:hover span.ab-label, #wpadminbar > #wp-toolbar > #wp-admin-bar-top-secondary li.hover span.ab-label, #wpadminbar .ab-top-menu > li > .ab-item:focus, #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus, #wpadminbar-nojs .ab-top-menu > li.menupop:hover > .ab-item, #wpadminbar .ab-top-menu > li.menupop.hover > .ab-item { color: #333333; }
+
+.customize-control select, .customize-control input[type="text"], .customize-control input[type="radio"], .customize-control input[type="checkbox"] { border-color: #bbb !important; }
+
+.customize-control .dropdown-status, .customize-control .dropdown-arrow { background: #e5e5e5; }
+
+.accordion-section .dropdown-content { border-color: #e5e5e5; }

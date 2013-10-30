@@ -3,7 +3,7 @@ Contributors: markjaquith
 Donate link: http://txfx.net/wordpress-plugins/donate
 Tags: jetpack, control
 Requires at least: 3.3
-Tested up to: 3.5.1
+Tested up to: 3.7
 Stable tag: 0.1
 
 Jetpack auto-activates new modules, without asking your permission. This plugin stops that.
@@ -34,11 +34,15 @@ I can't gurantee it. If they change how Jetpack module auto-activation and error
 
 == Upgrade Notice ==
 
-= 0.1 =
+= 0.2 =
 
-First version.
+Fixes issue causing dummy Jetpack error notices.
 
 == Changelog ==
+
+= 0.2 =
+
+* Much simpler method of suppressing auto activation of modules
 
 = 0.1 =
 

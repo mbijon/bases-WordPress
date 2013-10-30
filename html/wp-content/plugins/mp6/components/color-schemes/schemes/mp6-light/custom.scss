@@ -10,3 +10,21 @@
 #wpadminbar .ab-top-menu > li.menupop.hover > .ab-item {
 	color: $text-color;
 }
+
+.customize-control {
+	select,
+	input[type="text"],
+	input[type="radio"],
+	input[type="checkbox"] {
+		border-color: #bbb !important;
+	}
+}
+
+.customize-control .dropdown-status,
+.customize-control .dropdown-arrow {
+	background: $menu-background;
+}
+
+.accordion-section .dropdown-content {
+	border-color: $menu-background;
+}

@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
         files : {
           '<%= meta.colors %>/picker/style.css'           : '<%= meta.colors %>/picker/style.scss',
-          '<%= meta.customizer %>/customize-controls.css' : '<%= meta.customizer %>/scss/customize-controls.scss',
+          '<%= meta.customizer %>/customizer.css' : '<%= meta.customizer %>/scss/customizer.scss',
         }
       },
       colors: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           '<%= meta.colors %>/schemes/malibu-dreamhouse/customizer.css': ['<%= meta.colors %>/schemes/malibu-dreamhouse/colors.scss', '<%= meta.colors %>/schemes/_customizer.scss'],
 
           '<%= meta.colors %>/schemes/mp6-light/admin-colors.css': ['<%= meta.colors %>/schemes/mp6-light/colors.scss', '<%= meta.colors %>/schemes/_admin.scss', '<%= meta.colors %>/schemes/mp6-light/custom.scss'],
-          '<%= meta.colors %>/schemes/mp6-light/customizer.css': ['<%= meta.colors %>/schemes/mp6-light/colors.scss', '<%= meta.colors %>/schemes/_customizer.scss'],
+          '<%= meta.colors %>/schemes/mp6-light/customizer.css': ['<%= meta.colors %>/schemes/mp6-light/colors.scss', '<%= meta.colors %>/schemes/_customizer.scss', '<%= meta.colors %>/schemes/mp6-light/custom.scss'],
 
           '<%= meta.colors %>/schemes/pixel/admin-colors.css': ['<%= meta.colors %>/schemes/pixel/colors.scss', '<%= meta.colors %>/schemes/_admin.scss'],
           '<%= meta.colors %>/schemes/pixel/customizer.css': ['<%= meta.colors %>/schemes/pixel/colors.scss', '<%= meta.colors %>/schemes/_customizer.scss'],
