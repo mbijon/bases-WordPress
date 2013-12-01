@@ -1,0 +1,16 @@
+/*
+Theme Name:     Etch: _s Child
+Theme URI:      http://www.etchsoftware.com/
+Description:    Child theme for common Admin-UX & plugin helpers & customizations
+Author:         mbijon
+Author URI:     http://www.mbijon.com/
+Template:       _s
+Version:        1.0
+License: GNU General Public License v2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: _s
+Domain Path: /languages/
+*/
+
+
+@import url( '../_s/style.css' );
