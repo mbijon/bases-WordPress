@@ -1,10 +1,13 @@
 === WP Help ===
-Contributors: markjaquith
-Donate link: http://txfx.net/wordpress-plugins/donate
-Tags: help, documentation, client sites, clients, docs
-Requires at least: 3.4
-Tested up to: 3.5
-Stable tag: 1.1
+
+[![Build Status](https://travis-ci.org/markjaquith/wp-help.png?branch=master)](https://travis-ci.org/markjaquith/wp-help)  
+
+Contributors: markjaquith  
+Donate link: http://txfx.net/wordpress-plugins/donate  
+Tags: help, documentation, client sites, clients, docs  
+Requires at least: 3.6.1  
+Tested up to: 3.8  
+Stable tag: 1.3  
 
 Site operators can create detailed, hierarchical documentation for the site's authors, editors, and contributors, viewable in the WordPress admin.
 
@@ -65,6 +68,9 @@ You cannot internally sort synced documents — just move the whole "chunk" of s
 1. The Publishing Help screen, which lists and displays available help documents.
 
 == Upgrade Notice ==
+= 1.3 =
+Update for WordPress 3.8 support.
+
 = 1.2 =
 Update for better UI and support for WordPress 3.5.
 
@@ -81,6 +87,12 @@ Upgrade for a French translation.
 Upgrade if you want to use WP Help in one of these languages: Bulgarian, German, Spanish, Mexican Spanish, Macedonian, Dutch, Brazilian Portuguese, or Russian.
 
 == Changelog ==
+= 1.3 =
+* Make the `wp_list_pages()` call filterable.
+* Added Serbian, Turkish, and Japanese translations.
+* Use a Dashicon for WordPress 3.8+.
+* RTL CSS styles.
+
 = 1.2 =
 * New or updated translations for Gujarati, Norwegian, and Brazilian Portuguese.
 * CSS fixes for WordPress 3.5.
