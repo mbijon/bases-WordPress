@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=okoth
 Tags: bounce rate, seo, analytics, google, google analytics, statistics, stats, tracking, time on site
 Requires at least: 1.5.1
 Tested up to: 3.7
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,11 @@ Yes. Most people use the Traditional or the Asynchronous Syntax tracking code (g
 
 == Changelog ==
 
+
+= 1.5 =
+* Checked WP 3.8
+* All good!
+* December 13, 2013
 
 = 1.4 =
 * Checked WP 3.7
