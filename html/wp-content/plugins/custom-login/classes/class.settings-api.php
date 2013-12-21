@@ -14,7 +14,7 @@ if ( !class_exists( 'Extendd_Plugin_Settings_API' ) ):
 	/**
 	 * Version
 	 */
-	var $api_version = '1.0.7';
+	var $api_version = '1.0.9';
 
     /**
      * settings sections array
@@ -134,14 +134,15 @@ if ( !class_exists( 'Extendd_Plugin_Settings_API' ) ):
 		wp_enqueue_style( 'wp-color-picker' );
 		
 		/* jQuery Chosen */
-		wp_enqueue_script( 'jquery-chosen', plugins_url( 'assets/js/chosen.jquery.min.js', CUSTOM_LOGIN_FILE ), array( 'jquery' ), '0.9.12', false );
-		wp_enqueue_style( 'jquery-chosen', plugins_url( 'assets/css/chosen.css', CUSTOM_LOGIN_FILE ), false, '0.9.12', 'screen' );
+		wp_enqueue_script( 'jquery-chosen', plugins_url( 'assets/js/chosen.jquery.min.js', CUSTOM_LOGIN_FILE ), array( 'jquery' ), '1.0.0', false );
+		wp_enqueue_style( 'jquery-chosen', plugins_url( 'assets/css/chosen.css', CUSTOM_LOGIN_FILE ), false, '1.0.0', 'screen' );
 		
 		/* Admin */
-		wp_enqueue_style( $this->domain, plugins_url( 'assets/css/admin.css', CUSTOM_LOGIN_FILE ), false, '', 'screen' );
+		wp_enqueue_script( $this->domain, plugins_url( 'assets/js/admin.js', CUSTOM_LOGIN_FILE ), array( 'jquery' ), $this->version, false );
+		wp_enqueue_style( $this->domain, plugins_url( 'assets/css/admin.css', CUSTOM_LOGIN_FILE ), false, $this->version, 'screen' );
 		
 		/* Genericons */
-		wp_enqueue_style( 'genericons', plugins_url( 'assets/css/genericons.css', CUSTOM_LOGIN_FILE ), false, '', 'screen' );
+		wp_enqueue_style( 'genericons', plugins_url( 'assets/css/genericons.css', CUSTOM_LOGIN_FILE ), false, $this->version, 'screen' );
     }
 
     /**
@@ -766,6 +767,11 @@ if ( !class_exists( 'Extendd_Plugin_Settings_API' ) ):
 			if ( !is_wp_error( $site ) ) {
 				if ( isset( $site['body'] ) && strlen( $site['body'] ) > 0 ) {
 					$announcement = json_decode( wp_remote_retrieve_body( $site ) );
+					
+					// For when I mess up the JSON or github is down.
+					if ( is_wp_error( $announcement ) || empty( $announcement->message ) )
+						return;
+						
 					set_transient( $transient, $announcement, WEEK_IN_SECONDS * 2 ); // Cache for two weeks
 					update_option( $this->prefix . '_announcement_message', $announcement->message ); // Update the message
 				}
@@ -826,7 +832,7 @@ if ( !class_exists( 'Extendd_Plugin_Settings_API' ) ):
 
                             <?php do_action( $this->prefix . '_form_top_' . $form['id'], $form ); ?>
                             <?php settings_fields( $form['id'] ); ?>
-                            <?php do_settings_sections( $form['id'] ); ?>
+                            <div class="inside"><?php do_settings_sections( $form['id'] ); ?></div>
                             <?php do_action( $this->prefix . '_form_bottom_' . $form['id'], $form ); ?>
 
                             <div style="padding-left: 10px">

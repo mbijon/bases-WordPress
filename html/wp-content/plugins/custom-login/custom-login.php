@@ -4,7 +4,7 @@
  * Plugin Name: Custom Login 2.0
  * Plugin URI: http://extendd.com/plugin/custom-login
  * Description: A simple way to customize your WordPress <code>wp-login.php</code> screen! Use the built in, easy to use <a href="./options-general.php?page=custom-login">settings</a> page to do the work for you. Share you designs on <a href="http://flickr.com/groups/custom-login/">Flickr</a> or get Custom Login extensions at <a href="http://extendd.com/plugins/tag/custom-login-extension">Extendd.com</a>.
- * Version: 2.1.6
+ * Version: 2.1.8
  * Author: Austin Passy
  * Author URI: http://austinpassy.com
  * Text Domain: custom-login
@@ -30,7 +30,7 @@ class Custom_Login {
 	/**
 	 * Version
 	 */
-	var $version = '2.1.6';
+	var $version = '2.1.8';
 	
 	/**
 	 * Plugin vars
@@ -208,7 +208,8 @@ class Custom_Login {
 		
 		ob_start();
 			echo "<style type=\"text/css\">\n";
-				Custom_Login_Templates::get_template_part( 'wp-login', 'style' );
+				$login_template = new Custom_Login_Templates;
+				$login_template->get_template_part( 'wp-login', 'style' );
 			echo "\n</style>";
 		echo ob_get_clean();
 		
@@ -243,7 +244,8 @@ class Custom_Login {
 			
 			ob_start();
 				echo "<script type=\"text/javascript\">\n";
-					Custom_Login_Templates::get_template_part( 'wp-login', 'script' );
+					$login_template = new Custom_Login_Templates;
+					$login_template->get_template_part( 'wp-login', 'script' );
 				echo "\n</script>";				
 			echo ob_get_clean();
 			
@@ -474,7 +476,17 @@ class Custom_Login {
                         'cover' 	=> 'cover',
                         'contain' 	=> 'contain',
                         'flex' 		=> 'flex',
+                        'custom' 	=> 'custom',
                     )
+                ),
+                array(
+                    'name' 		=> 'logo_background_size_custom',
+                    'label' 	=> __( 'Logo Background size (custom)', $this->domain ),
+                    'desc' 		=> sprintf( __( 'Use size values in format "INTunit INTunit". Example: 10px 15px or 55px 55px etc. %sNote: Logo Background size MUST be set to none.%s', $this->domain ), '<strong>', '</strong>' ),
+                    'type' 		=> 'text',
+					'size'		=> 'medium',
+                    'default' 	=> '',
+					'sanitize_callback' => '',
                 ),
 				/** BREAK **/
                 array(
